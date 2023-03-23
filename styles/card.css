@@ -1,0 +1,120 @@
+.card {
+    border-radius: 64px;
+    border-style: solid;
+    border-width: 3px;
+
+    background-color: rgb(0, 0, 0, 0.5);
+
+    width: fit-content;
+    height: fit-content;
+
+    vertical-align: top;
+
+    margin: 1%;
+
+    transition: 1.5s;
+    backdrop-filter: blur(2px);
+    filter: blur(0px);
+    opacity: 1;
+
+    display: inline-block;
+
+    border-color: rgb(85, 0, 0, 0.4);
+    box-shadow: 0px 0px 20px 5px rgba(85, 0, 0, 0.5), inset 0px 0px 20px 1px rgb(85, 0, 0, 0.5);
+}
+
+.card:hover {
+    transition: 1.5s;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    filter: blur(0px);
+}
+
+.card:hover, .card-red-effect {
+    border-color: rgb(255, 0, 0, 0.4);
+    box-shadow: 0px 0px 20px 10px rgb(255 0 0 / 50%), inset 0px 0px 20px 3px rgb(255 0 0 / 50%);
+}
+
+.card-menu {
+    border-radius: 24px;
+    border-style: solid;
+    border-width: 3px;
+
+    border-color: rgb(255, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
+
+    width: fit-content;
+    height: fit-content;
+
+    vertical-align: top;
+
+    transition: 1.5s;
+
+    backdrop-filter: blur(2px);
+    filter: blur(0px);
+
+    display: inline-block;
+}
+
+.card-menu:hover {
+    transition: 1.5s;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    filter: blur(0px);
+    border-color: rgb(255, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+.card-display-block{
+    display: block !important;
+}
+
+.menu-top {
+    z-index: 999;
+
+    border-radius: 24px;
+
+    animation: 0.2s ease-in-out 0s normal animationMenu;
+}
+
+@keyframes animationMenu {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0.5;
+        filter: blur(5px);
+        scale: 50%;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0px);
+        scale: 100%;
+    }
+}
+
+.top-align {
+    vertical-align: top;
+}
+
+.card-rgb {
+    background: linear-gradient(-45deg, #ee7652, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    filter: opacity(0.5);
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

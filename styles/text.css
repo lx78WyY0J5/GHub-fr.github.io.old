@@ -1,0 +1,130 @@
+a, 
+.text-title,
+.text-sub-title,
+.text-name {
+    color: whitesmoke !important;
+}
+
+.text-description {
+    color: rgba(190, 190, 190) !important;
+}
+
+p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+.text-font,
+.text-link {
+    font-family: 'Garamond';
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+.text-block {
+    display: block;
+}
+
+.text-underline,
+.text-title,
+.text-sub-title {
+    text-decoration: underline !important;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+
+.text-link {
+    text-decoration: none;
+    color: white;
+}
+
+.text-margin {
+    margin: 3px;
+}
+
+.text-inline,
+.text-inline-pad {
+    display: inline-block;
+}
+
+.text-padding-right,
+.text-inline-pad {
+    padding-right: 10px;
+}
+
+.text-padding-left,
+.text-inline-pad {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.text-padding-top {
+    padding-top: 10px;
+}
+
+.text-padding-bot {
+    padding-bottom: 10px;
+}
+
+.text-font {
+    color: grey;
+}
+
+.text-small,
+.text-date {
+    font-size: 22px;
+}
+
+.text-normal,
+.text-description,
+.text-sub-title {
+    font-size: 26px;
+}
+
+.text-large,
+.text-title {
+    font-size: 32px;
+}
+
+.text-extra,
+.text-name {
+    font-size: 38px;
+}
+
+.text-bold,
+.text-title,
+.text-sub-title,
+.text-name {
+    font-weight: bold;
+}
+
+.text-right {
+    text-align: right;
+    float: right;
+}
+
+.text-left {
+    float: left;
+}
+
+.text-center {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.text-splitter {
+    color: red;
+}
+
+@media only screen and (max-width: 750px) {
+    .text-splitter {
+        padding: 5px;
+        opacity: 0.5;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .text-splitter {
+        padding: 2px;
+        opacity: 0;
+    }
+}

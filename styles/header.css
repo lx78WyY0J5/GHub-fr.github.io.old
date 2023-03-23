@@ -1,0 +1,41 @@
+#header {
+    background-color: rgba(0, 0, 0, 1);
+
+    display: inline-table;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: min-content;
+    min-height: 7.5vh;
+
+    border: 0;
+    border-bottom: 0.5vh;
+    border-color: rgb(255, 0, 0, 0.2);
+    border-style: solid;
+
+    margin-bottom: 2.5vh;
+
+    z-index: 1000;
+
+    box-shadow: 0px 5px 20px 5px rgb(255 0 0 / 50%);
+}
+
+@media only screen and (max-height: 950px) {
+    #header {
+        position: relative !important;
+    }
+}
+
+@media only screen and (max-width: 800px) and (max-height: 1050px) {
+    #div_devmode {
+        display: none; 
+    }
+}
+
+@media only screen and (max-width: 1400px) and (max-height: 1050px) {
+    #menu-main-card {
+        display: none;
+    }
+}
