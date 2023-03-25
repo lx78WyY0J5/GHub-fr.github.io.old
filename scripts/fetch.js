@@ -26,6 +26,7 @@ async function include_all() {
 
     await include_script("/scripts/github-header.js", "body", false);
 
+    //cursor inside content
     await include_css("/styles/cursor.css");
     await include_script("/scripts/cursor.js");
 
