@@ -7,7 +7,7 @@ document.addEventListener("mousemove", (event) => {
 });
 
 const cursoreffect = document.querySelector("cursor");
-let anchors2 = document.getElementsByClassName("text-link");
+//let anchors2 = document.getElementsByClassName("text-link");
 let anchors = document.getElementsByTagName("a");
 
 
