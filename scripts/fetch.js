@@ -26,11 +26,11 @@ async function include_all() {
 
     await include_script("/scripts/github-header.js", "body", false);
 
+    await custom_pages_include();
+    
     //cursor inside content
     await include_css("/styles/cursor.css");
     await include_script("/scripts/cursor.js");
-
-    await custom_pages_include();
 }
 
 async function include(link, query, queryOrIndex) {
