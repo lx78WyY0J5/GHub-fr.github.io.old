@@ -155,6 +155,9 @@ async function custom_pages_include() {
         else if (pathname === "/pages/views/projects/cours.html") {
             await include_md_indiv("https://raw.githubusercontent.com/GHub-fr/cours/main/README.md", "content");
         }
+        else if (pathname === "/pages/views/projects/server.html") {
+            await include_md_indiv("https://raw.githubusercontent.com/GHub-fr/server/main/README.md", "content");
+        }
     }
 
     else if (pathname.startsWith("/pages/views/administrateur")) {
