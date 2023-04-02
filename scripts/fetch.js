@@ -27,7 +27,7 @@ async function include_all() {
     await include_script("/scripts/github-header.js", "body", false);
 
     await custom_pages_include();
-    
+
     //cursor inside content
     await include_css("/styles/cursor.css");
     await include_script("/scripts/cursor.js");
@@ -81,6 +81,20 @@ async function include_md(url, query) {
         });
 }
 
+async function include_md_indiv(url, query) {
+    let response = await fetch(url)
+        .then(response => {
+            return response.text()
+        })
+        .then(data => {
+            let MDText = parseMd(data);
+            document.getElementById(query).innerHTML += "<div class=\"card container-large text-font\">" + MDText + "</div>";
+        })
+        .catch(error => {
+            console.log(error);
+        });
+}
+
 async function custom_pages_include() {
     var pathname = window.location.pathname;
     if (pathname == "/") {
@@ -101,15 +115,45 @@ async function custom_pages_include() {
     }
 
     else if (pathname.startsWith("/pages/views/opensource")) {
+        await include_script("/scripts/md-parser.js", "content", true);
+
         var pathnameInclude = pathname.replace("views", "contents");
         await include(pathnameInclude, "content", true);
 
         if (pathname === "/pages/views/opensource/contribuer.html") {
-            await include_script("/scripts/md-parser.js", "content", true);
             await include_md("/pages/contents/home.md", "content");
+        }
+        else if (pathname === "/pages/views/opensource/license.html") {
+            await include_md_indiv("https://raw.githubusercontent.com/GHub-fr/.github/main/LICENSE.md", "content");
+        }
+        else if (pathname === "/pages/views/opensource/code_of_conduct.html") {
+            await include_md_indiv("https://raw.githubusercontent.com/GHub-fr/.github/main/CODE_OF_CONDUCT.md", "content");
         }
         else if (pathname === "/pages/views/opensource/participants.html") {
             await include_script("/scripts/github-participants.js", "content", true);
+        }
+    }
+
+    else if (pathname.startsWith("/pages/views/projects")) {
+        await include_script("/scripts/md-parser.js", "content", true);
+
+        var pathnameInclude = pathname.replace("views", "contents");
+        await include(pathnameInclude, "content", true);
+
+        if (pathname === "/pages/views/projects/.github.html") {
+            await include_md_indiv("https://raw.githubusercontent.com/GHub-fr/.github/main/profile/README.md", "content");
+        }
+        else if (pathname === "/pages/views/projects/page.html") {
+            await include_md_indiv("https://raw.githubusercontent.com/GHub-fr/GHub-fr.github.io/main/README.md", "content");
+        }
+        else if (pathname === "/pages/views/projects/plugin.html") {
+            await include_md_indiv("https://raw.githubusercontent.com/GHub-fr/plugin/main/README.md", "content");
+        }
+        else if (pathname === "/pages/views/projects/bot.html") {
+            await include_md_indiv("https://raw.githubusercontent.com/GHub-fr/bot/main/README.md", "content");
+        }
+        else if (pathname === "/pages/views/projects/cours.html") {
+            await include_md_indiv("https://raw.githubusercontent.com/GHub-fr/cours/main/README.md", "content");
         }
     }
 
@@ -119,9 +163,6 @@ async function custom_pages_include() {
             await include_script("/scripts/giscus_administrator.js", "content", true);
         }
 
-        if (1 === 1) {
-
-        }
         var pathnameInclude = pathname.replace("views", "contents");
         await include(pathnameInclude, "content", true);
     }
