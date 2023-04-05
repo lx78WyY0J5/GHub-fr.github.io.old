@@ -1,13 +1,11 @@
 function include_giscus_script() {
     var script = document.createElement("script");
     script.src = "https://giscus.app/client.js";
-    script.setAttribute("data-repo", "GHub-fr/.github");
-    script.setAttribute("data-repo-id", "R_kgDOIpOjWQ");
-    script.setAttribute("data-category", "Giscus");
-    script.setAttribute("data-category-id", "DIC_kwDOIpOjWc4CTPqF");
-    script.setAttribute("data-mapping", "specific");
-    script.setAttribute("data-term", "Livre d'or");
-    script.setAttribute("data-strict", "0");
+    script.setAttribute("data-repo", "GHub-fr/GHub-fr.github.io");
+    script.setAttribute("data-repo-id", "R_kgDOJNM0Gg");
+    script.setAttribute("data-mapping", "number");
+    script.setAttribute("data-term", "1");
+    script.setAttribute("data-strict", "1");
     script.setAttribute("data-reactions-enabled", "1");
     script.setAttribute("data-emit-metadata", "1");
     script.setAttribute("data-input-position", "top");

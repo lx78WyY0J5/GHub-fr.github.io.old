@@ -4,7 +4,8 @@ function include_giscus_script() {
     script.setAttribute("data-repo", "lx78WyY0J5/lx78WyY0J5");
     script.setAttribute("data-repo-id", "R_kgDOHyC_oA");
     script.setAttribute("data-mapping", "number");
-    script.setAttribute("data-term", "7");
+    script.setAttribute("data-term", "8");
+    script.setAttribute("data-strict", "1");
     script.setAttribute("data-reactions-enabled", "1");
     script.setAttribute("data-emit-metadata", "1");
     script.setAttribute("data-input-position", "top");
